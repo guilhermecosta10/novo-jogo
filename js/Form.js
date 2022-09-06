@@ -33,12 +33,18 @@ class Form
     this.greeting.hide();
     this.playButton.hide();
     this.input.hide();
+    this.treino.hide();
+    this.campeonatos.hide();
+    this.perfil.hide();
   }
 
   display() 
   {
     this.telaInicial();
     this.detectPlayButton();
+    this.detectTreinoButton();
+    this.detectCampeonatoButton();
+    this.detectPerfilButton();
   }
 
   detectPlayButton() 
@@ -51,7 +57,8 @@ class Form
       this.greeting.html(message);
       player.name = this.input.value();
       this.modosDeJogo();
-      //game.play();
+      gameState = 1;
+
       
     }) 
   }
@@ -60,10 +67,29 @@ class Form
   {
     this.treino.mousePressed(()=>{
 
-      this.input.hide();
-      this.treino.hide();
+      this.hide();
+      gameState = 2;
 
     }) 
+  }
+
+  detectCampeonatoButton() 
+  {
+    this.campeonatos.mousePressed(()=>{
+
+      this.hide();
+      gameState = 3;
+
+    })
+  }
+
+  detectPerfilButton() 
+  {
+    this.perfil.mousePressed(()=>{
+
+      this.hide();
+      gameState = 4;
+    })
   }
 
   
