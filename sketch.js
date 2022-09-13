@@ -3,7 +3,9 @@ var form, player;
 var game;
 var gameState = 0;
 var tipoDeCampeonato = 0;
-
+var cabelo;
+var pele;
+var olhoDir, olhoEsq;
 
 
 function preload() 
@@ -40,7 +42,19 @@ function draw()
     {
       game.torneio();
     }
+
+    else if(tipoDeCampeonato == 2) 
+    {
+      game.torneioNac();
+    }
+
+    else if(tipoDeCampeonato == 3) 
+    {
+      game.torneioInternac();
+    }
+  
   }
+
 
   if(gameState == 4) 
   {
