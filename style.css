@@ -95,10 +95,73 @@ canvas {
 }
 
 .leadersText{
-  font-size: 85px;
+  font-size: 50px;
   color: white;
   font-family: vollkorn;
   text-align: center;
+}
+
+.p1
+{
+  width: 100px;
+  height: 40px;
+  background-color: #e6b870;
+}
+
+.p2 
+{
+  width: 100px;
+  height: 40px;
+  background-color: #503b0f;
+}
+
+.p3
+{
+  width: 100px;
+  height: 40px;
+  background-color: #180e02;
+}
+
+.c1
+{
+  width: 100px;
+  height: 40px;
+  background-color: #e0e071;
+}
+
+.c2 
+{
+  width: 100px;
+  height: 40px;
+  background-color: #412b05;
+}
+
+.c3
+{
+  width: 100px;
+  height: 40px;
+  background-color: #0a0701;
+}
+
+.o1 
+{
+  width: 100px;
+  height: 40px;
+  background-color: #34d9f1;
+}
+
+.o2
+{
+  width: 100px;
+  height: 40px;
+  background-color: #301d07;
+}
+
+.o3 
+{
+ width: 100px;
+ height: 40px;
+ background-color: #0e0802;
 }
 
 .customButton 
