@@ -88,6 +88,7 @@ class Form
     this.perfil.mousePressed(()=>{
 
       this.hide();
+      game.pre_perfil();
       gameState = 4;
     })
   }
