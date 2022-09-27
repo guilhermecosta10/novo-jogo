@@ -54,10 +54,12 @@ function draw()
     }
   
   }
-    if(gameState == 4) 
-    {
-      game.perfil();
-    }
+
+
+  if(gameState == 4) 
+  {
+    game.perfil();
+  }
 
 }
 

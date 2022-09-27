@@ -72,27 +72,25 @@ class Game
     this.detectTorneioInternacional();
   }
 
-  pre_perfil()
-  {
-    rect(50,375,300,375);
-
-    pele = createSprite(200,600,200,150);
-    pele.shapeColor = "#ee9f46";
-
-    olhoDir = createSprite(225,500,30,30);
-    olhoDir.shapeColor = "#6b3809";
-
-    olhoEsq = createSprite(175,500,30,30);
-    olhoEsq.shapeColor = "#6b3809";
-
-    cabelo = createSprite(200,440,100,60);
-    cabelo.shapeColor = "#180b02";
-  }
-
   perfil() 
   {
     background("purple");
     this.handleElements();
+
+    rect(50,375,300,375)
+
+    pele = createSprite(200,600,200,150);
+    pele.shapeColor = "#ee9f46"
+
+    olhoDir = createSprite(225,500,30,30);
+    olhoDir.shapeColor = "#6b3809"
+
+    olhoEsq = createSprite(175,500,30,30);
+    olhoEsq.shapeColor = "#6b3809"
+
+    cabelo = createSprite(200,440,100,60);
+    cabelo.shapeColor = "#180b02"
+
 
     this.p1.position(600,350);
     this.p1.class("p1");
@@ -139,9 +137,7 @@ class Game
     this.Olho.class("leadersText");
     this.Olho.html("Olhos");
 
-    this.detectPele();
-    this.detectCabelo();
-    this.detectOlhos();
+    this.detectPele(pele);
 
     drawSprites();
   }
@@ -194,12 +190,12 @@ class Game
     })
   }
 
-  detectPele() 
+  detectPele(p) 
   {
     this.p1.mousePressed(()=>{
 
       console.log("apertou p1");
-      pele.shapeColor = "#e6b870";
+      p.shapeColor = "#e6b870";
     })
 
     this.p2.mousePressed(()=>{
@@ -210,47 +206,6 @@ class Game
     this.p3.mousePressed(()=>{
 
       pele.shapeColor = "#180e02";
-    })
- }
-
- detectCabelo() 
-  {
-    this.c1.mousePressed(()=>{
-
-      console.log("apertou c1");
-      cabelo.shapeColor = "#e0e071";
-    })
-
-    this.c2.mousePressed(()=>{
-
-      cabelo.shapeColor = "#412b05";
-    })
-
-    this.c3.mousePressed(()=>{
-
-      cabelo.shapeColor = "#0a0701";
-    })
- }
-
- detectOlhos() 
-  {
-    this.o1.mousePressed(()=>{
-
-      console.log("apertou o1");
-      olhoEsq.shapeColor = "#34d9f1";
-      olhoDir.shapeColor = "#34d9f1";
-    })
-
-    this.o2.mousePressed(()=>{
-
-      olhoEsq.shapeColor = "#301d07";
-      olhoDir.shapeColor = "#301d07";
-    })
-
-    this.o3.mousePressed(()=>{
-
-      olhoEsq.shapeColor = "#0e0802";
-      olhoDir.shapeColor = "#0e0802";
     })
  }
 
