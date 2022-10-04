@@ -6,14 +6,20 @@ var tipoDeCampeonato = 0;
 var cabelo;
 var pele;
 var olhoDir, olhoEsq;
-
+var bolaImg;
+var campoImg;
+var conesImg;
+var travesImg;
 
 function preload() 
 {
-
+  bolaImg = loadImage("assets/bola.png");
+  campoImg = loadImage("assets/campo.png");
+  conesImg = loadImage("assets/cones.jpg");
+  travesImg = loadImage("assets/traves.png");
 }
 
-function setup() 
+function setup()
 {
   canvas = createCanvas(windowWidth, windowHeight);
   game = new Game();
@@ -23,6 +29,11 @@ function setup()
 function draw() 
 {
   background("green");
+
+  if (gameState == 0) 
+  {
+    game.start();
+  }
 
   if (gameState == 1) 
   {
@@ -54,12 +65,10 @@ function draw()
     }
   
   }
-
-
-  if(gameState == 4) 
-  {
-    game.perfil();
-  }
+    if(gameState == 4) 
+    {
+      game.perfil();
+    }
 
 }
 
